@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://bmtmnsoq6xr66"]
+
+[ext_resource type="Script" path="res://objects/humans/player.gd" id="1_0ng4p"]
+[ext_resource type="Texture2D" path="res://textures/humans/Generic Male NPCs.png" id="1_56p8p"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b3swl"]
+radius = 8.0
+height = 34.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yeah7"]
+atlas = ExtResource("1_56p8p")
+region = Rect2(560, 480, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mi4t"]
+atlas = ExtResource("1_56p8p")
+region = Rect2(480, 720, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwors"]
+atlas = ExtResource("1_56p8p")
+region = Rect2(560, 720, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21wjk"]
+atlas = ExtResource("1_56p8p")
+region = Rect2(640, 720, 80, 120)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bv67l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yeah7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3mi4t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwors")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_21wjk")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_0ng4p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 2)
+shape = SubResource("CapsuleShape2D_b3swl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -1)
+scale = Vector2(0.375, 0.316667)
+sprite_frames = SubResource("SpriteFrames_bv67l")
+animation = &"walk"
+frame_progress = 0.523149
+
+[node name="Camera2D" type="Camera2D" parent="."]
