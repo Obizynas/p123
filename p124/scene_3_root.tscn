@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cavlbbxsv4gsp"]
+
+[node name="Scene3Root" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_top = -1.0
+offset_right = 40.0
+offset_bottom = 22.0
