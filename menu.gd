@@ -9,7 +9,7 @@ func _ready() -> void:
 	# Завантажуємо сцени
 	scene_1 = load("res://scene_1_root.tscn") as PackedScene
 	scene_2 = load("res://scene_2_root.tscn") as PackedScene
-	scene_3 = load("res://scene_3_root.tscn") as PackedScene
+	scene_3 = load("res://game.tscn") as PackedScene
 
 	# Підключаємо кнопки до їхніх функцій
 	$CanvasLayer/TestButton1.pressed.connect(_on_TestButton1_pressed)
@@ -18,7 +18,7 @@ func _ready() -> void:
 
 # Функція для зміни сцени на scene_1
 func _on_TestButton1_pressed() -> void:
-	get_tree().change_scene_to_file("res://scene_1_root.tscn")
+	get_tree().change_scene_to_file("res://game.tscn")
 
 # Функція для зміни сцени на scene_2
 func _on_TestButton2_pressed() -> void:

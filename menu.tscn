@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d36e058fy6jl0"]
 
-[ext_resource type="Script" uid="uid://gjshnoudri6v" path="res://menu.gd" id="1_ouk20"]
+[ext_resource type="Script" path="res://menu.gd" id="1_ouk20"]
 [ext_resource type="FontFile" uid="uid://c70xjaiqfl0l4" path="res://fonts/LilitaOne-Regular.ttf" id="2_w3val"]
 
 [node name="Node2D" type="Node2D"]
