@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d36e058fy6jl0"]
+[gd_scene load_steps=3 format=3 uid="uid://d36e058fy6jl0"]
 
-[ext_resource type="Script" uid="uid://gjshnoudri6v" path="res://menu.gd" id="1_ouk20"]
+[ext_resource type="Script" path="res://menu.gd" id="1_ouk20"]
+[ext_resource type="FontFile" uid="uid://c70xjaiqfl0l4" path="res://fonts/LilitaOne-Regular.ttf" id="2_w3val"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(428, 299)
@@ -14,11 +15,13 @@ anchor_left = 0.162
 anchor_top = 0.112
 anchor_right = 0.162
 anchor_bottom = 0.112
-offset_left = 229.376
-offset_top = 199.424
-offset_right = 642.376
-offset_bottom = 235.424
+offset_left = 230.376
+offset_top = 130.424
+offset_right = 641.376
+offset_bottom = 182.424
 scale = Vector2(0.913685, 0.923135)
+theme_override_fonts/font = ExtResource("2_w3val")
+theme_override_font_sizes/font_size = 37
 text = "Play"
 
 [node name="TestButton2" type="Button" parent="CanvasLayer"]
@@ -27,11 +30,13 @@ anchor_left = 0.487
 anchor_top = 0.37
 anchor_right = 0.487
 anchor_bottom = 0.37
-offset_left = -136.024
-offset_top = 97.24
-offset_right = 272.976
-offset_bottom = 130.24
+offset_left = -144.024
+offset_top = 28.24
+offset_right = 275.976
+offset_bottom = 87.24
 scale = Vector2(0.89386, 0.793716)
+theme_override_fonts/font = ExtResource("2_w3val")
+theme_override_font_sizes/font_size = 37
 text = "Settings"
 
 [node name="TestButton3" type="Button" parent="CanvasLayer"]
@@ -40,17 +45,20 @@ anchor_left = 0.183
 anchor_top = 0.296
 anchor_right = 0.191
 anchor_bottom = 0.301
-offset_left = 222.184
-offset_top = 206.192
-offset_right = 576.968
-offset_bottom = 233.952
+offset_left = 206.184
+offset_top = 139.192
+offset_right = 585.968
+offset_bottom = 187.952
 scale = Vector2(0.959999, 1)
+theme_override_fonts/font = ExtResource("2_w3val")
+theme_override_font_sizes/font_size = 37
 text = "Quit"
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 offset_left = 451.0
 offset_top = 71.0
-offset_right = 592.0
-offset_bottom = 94.0
+offset_right = 607.0
+offset_bottom = 97.0
 scale = Vector2(1.93958, 2.38169)
+theme_override_fonts/font = ExtResource("2_w3val")
 text = "Speakeasy Empire"
