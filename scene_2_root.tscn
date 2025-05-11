@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6q0xuj4g3ds7"]
+[gd_scene load_steps=4 format=3 uid="uid://c6q0xuj4g3ds7"]
 
 [ext_resource type="Script" uid="uid://dnjli3iihairv" path="res://control.gd" id="1_hocxa"]
+[ext_resource type="FontFile" uid="uid://c70xjaiqfl0l4" path="res://fonts/LilitaOne-Regular.ttf" id="2_nf77o"]
+[ext_resource type="Script" uid="uid://c4fq7htntly2m" path="res://control_2.gd" id="3_48dgy"]
 
 [node name="Scene2Root" type="Node2D"]
 
@@ -13,10 +15,12 @@ script = ExtResource("1_hocxa")
 
 [node name="Button" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 408.0
-offset_top = 182.0
-offset_right = 749.0
-offset_bottom = 221.0
+offset_left = 404.0
+offset_top = 168.0
+offset_right = 760.0
+offset_bottom = 220.0
+theme_override_fonts/font = ExtResource("2_nf77o")
+theme_override_font_sizes/font_size = 37
 text = "Language"
 
 [node name="SmallPanel" type="Panel" parent="Control"]
@@ -33,3 +37,50 @@ offset_top = 1.0
 offset_right = 360.0
 offset_bottom = 17.0
 text = "esc"
+
+[node name="VolumePanel" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_48dgy")
+
+[node name="HSlider" type="HSlider" parent="VolumePanel"]
+layout_mode = 0
+offset_left = 577.0
+offset_top = 94.0
+offset_right = 585.0
+offset_bottom = 110.0
+max_value = 1.0
+step = 0.1
+value = 1.0
+
+[node name="CloseButton2" type="Button" parent="VolumePanel"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="LabelMin" type="Label" parent="VolumePanel"]
+layout_mode = 0
+offset_left = 497.0
+offset_top = 88.0
+offset_right = 537.0
+offset_bottom = 111.0
+text = "0"
+
+[node name="LabelMid" type="Label" parent="VolumePanel"]
+layout_mode = 0
+offset_left = 583.0
+offset_top = 87.0
+offset_right = 623.0
+offset_bottom = 110.0
+text = "0.5"
+
+[node name="LabelMax" type="Label" parent="VolumePanel"]
+layout_mode = 0
+offset_left = 708.0
+offset_top = 70.0
+offset_right = 748.0
+offset_bottom = 93.0
+scale = Vector2(2.42639, 2.12581)
+text = "1"
